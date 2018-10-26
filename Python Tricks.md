@@ -11,7 +11,7 @@ for i in range (10):
 
 #Dictionary
   data = {}
-  data.update({n:x}) # Updates if 'a' exists, else adds 'a'
+  data.update({a:x}) # Updates if 'a' exists, else adds 'a'
   del data[key]  # Removes specific element in a dictionary
   data.pop(key)  # Removes the key & returns the value
   data.clear()  # Clears entire dictionary
@@ -24,5 +24,21 @@ for i in range (10):
   print ("Today's stock price: %f" % 50.4625)   # --> 50.462500
   print ("Today's stock price: %.2f" % 50.4625) # --> 50.46
   print ("Change since yesterday: %+.2f" % 1.5) # --> +1.50
+  
+#Strings
+  print(x[0]) #first character
+  print(x[0:1]) #first character, but we have explicitly set the end character
+  print(x[0:2]) #first two characters
+  print(x[-1]) #last character
+  print(x[:3]) #This is a slice from the beginning of the string and stopping before the 3rd element.
+  
+  firstname = 'Christopher Arthur Hansen Brooks'.split(' ')[0] # [0] selects the first element of the list
+  lastname = 'Christopher Arthur Hansen Brooks'.split(' ')[-1] # [-1] selects the last element of the list
+  print(firstname) #Christopher
+  print(lastname) #Brooks
+  
+  sales_record = {'price': 3.24,'num_items': 4,'person': 'Chris'}
+  sales_statement = '{} bought {} item(s) at a price of {} each for a total of {}'
+  print(sales_statement.format(sales_record['person'],sales_record['num_items'],                                               sales_record['price'],sales_record['num_items']*sales_record['price']))
 
 ```
